@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Allow access to existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite clean URLs to products.php?category=...
+# Example: /women -> products.php?category=women
+RewriteRule ^([^/]+)/?$ products.php?category=$1 [L,QSA]
