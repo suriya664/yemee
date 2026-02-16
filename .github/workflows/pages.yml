@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
 
+# Updated to fix deprecated actions issue - 2025-02-16
 on:
   push:
     branches: [ main ]
